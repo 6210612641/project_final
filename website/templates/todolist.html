@@ -1,3 +1,4 @@
+{% include "layout.html" %}
 {% load static %}
 <html lang="en">
 
@@ -18,6 +19,16 @@
         {{ form.as_p }}
         <input type="submit" name="Submit" id="submit">
     </form>
+
+    <table>
+        {% for show in show %}
+        <tr>
+            <td>
+                {{show.date}}
+                {{show.list}}
+            </td>
+        </tr>
+        {% endfor %}
 
 </body>
 

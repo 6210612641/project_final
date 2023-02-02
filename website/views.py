@@ -26,7 +26,7 @@ def todolist(request):
             print("Error", form.errors)
     form = ListModelForm()
     show = ListModel.objects.all()
-    return render(request, 'todolist.html', {'form':form})
+    return render(request, 'todolist.html', {'form':form , 'show':show } )
 
 
 

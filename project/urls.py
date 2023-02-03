@@ -23,7 +23,8 @@ from django.urls import path,include
 urlpatterns = [
     path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
     path('admin/', admin.site.urls),
-    path('', include(('website.urls'))),
+    path('', include(('user.urls'))),
+    path('home/', include('website.urls')),
 
     
 ]
